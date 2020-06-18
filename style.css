@@ -1,0 +1,162 @@
+    body {
+      min-height: 100vh;
+      display: grid;
+      align-items: center;
+      justify-items: center;
+      background: white;
+      /* background: url(./blackbrickwallpaper.jpg); */
+      background-size: cover;
+      font-family: 'Press Start 2P', cursive;
+      background-color: black;
+    }
+
+    :root {
+      /* Base font size */
+      font-size: 10px;   
+      
+      /* Set neon color */
+      --neon-text-color: #FF0080;
+      --neon-border-color: #08f;
+    }
+    
+    .titleBoard {
+      font-weight: 200;
+      font-family: 'Bungee', cursive;
+      color: #fff;
+      padding: 4rem 8rem 4.5rem;
+      border: 0.4rem solid #fff;
+      border-radius: 2rem;
+      text-transform: uppercase;
+      animation: flicker 0.5s infinite alternate; 
+      background-color: black;   
+      text-align: center; 
+      margin: 20px;
+      letter-spacing: 0.1em;
+    }
+    
+    .titleBoard::-moz-selection {
+      background-color: var(--neon-border-color);
+      color: var(--neon-text-color);
+    }
+    
+    .titleBoard::selection {
+      background-color: var(--neon-border-color);
+      color: var(--neon-text-color);
+    }
+    
+    .titleBoard:focus {
+      outline: none;
+    }
+    
+    /* Animate neon flicker */
+    @keyframes flicker {
+        
+        0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+          
+            text-shadow:
+                -0.2rem -0.2rem 1rem #fff,
+                0.2rem 0.2rem 1rem #fff,
+                0 0 2rem var(--neon-text-color),
+                0 0 4rem var(--neon-text-color),
+                0 0 6rem var(--neon-text-color),
+                0 0 8rem var(--neon-text-color),
+                0 0 10rem var(--neon-text-color);
+            
+            box-shadow:
+                0 0 .5rem #fff,
+                inset 0 0 .5rem #fff,
+                0 0 2rem var(--neon-border-color),
+                inset 0 0 2rem var(--neon-border-color),
+                0 0 4rem var(--neon-border-color),
+                inset 0 0 4rem var(--neon-border-color);        
+        }
+        
+        20%, 24%, 55% {        
+            text-shadow: none;
+            box-shadow: none;
+        }    
+    }
+
+    canvas {
+      border: 30px solid #e80000;
+      border-radius: 10px;
+      /* Set the width and height to half the actual size so it doesn't look pixelated */
+      width: 800px;
+      height: 500px;
+      background: white;
+    }
+
+    .buttons {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    button {
+      font-family: 'Bungee', cursive;
+      border-radius: 25px;
+      background-color: #00b100;
+      -webkit-box-shadow: 0px 7px 4px 2px rgb(192,192,192);
+      -moz-box-shadow: 0px 7px 4px 2px rgb(192,192,192);
+      box-shadow: 0px 7px 4px 2px rgb(192,192,192);
+      border: none;
+      margin: 20px;
+      cursor: pointer;
+      padding: 1.5rem 2rem;
+      font-size: 2rem;
+      transition: all .3s;
+      cursor: pointer;
+      min-width: 120px;
+    }
+
+    button:hover {
+      transform: scale(1.08);
+    }
+    button:active {
+      transform: scale(.78);
+    }
+
+    .decrease {
+      background-color: #e80000;
+    }
+
+    .shakebutton {
+      background-color: #2490d6;
+  };
+
+
+  canvas {
+    border: 30px solid #e80000;
+    border-radius: 10px;
+    /* Set the width and height to half the actual size so it doesn't look pixelated */
+    width: 800px;
+    height: 500px;
+    background: white;
+  }
+
+  canvas.shake {
+    animation: shake 0.5s linear 1;
+  }
+
+  @keyframes shake {
+
+    10%,
+    90% {
+      transform: translate3d(-1px, 0, 0);
+    }
+
+    20%,
+    80% {
+      transform: translate3d(2px, 0, 0);
+    }
+
+    30%,
+    50%,
+    70% {
+      transform: translate3d(-4px, 0, 0);
+    }
+
+    40%,
+    60% {
+      transform: translate3d(4px, 0, 0);
+    }
+  }
