@@ -10,9 +10,9 @@
 
 1. Refresh the page if you want to move your starting position or use the shake button.
 2. Use your arrow keys to move around the canvas and create your amazing drawings
-3. Use the + button to increase the size of the brush stroke
-4. Use the - button to decrease the size of the brush stroke
-5. Use the shake button to clear your etch-a-sketch screen
+3. Use the `+` button to increase the size of the brush stroke
+4. Use the `-` button to decrease the size of the brush stroke
+5. Use the `shake` button to clear your etch-a-sketch screen
 
 **Where I was inspired:** I have been working through a Wes Bos course which I brought during lockdown to upskill and refresh my JavaScript skills. On this particular take I have rebuilt the etch-a-sketch as much as I can and made references when I needed it. Plus I added my own feature:
 
